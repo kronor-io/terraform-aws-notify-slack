@@ -92,6 +92,7 @@ module "lambda" {
   source_path                  = var.lambda_source_path != null ? "${path.root}/${var.lambda_source_path}" : "${path.module}/functions/notify_slack.py"
   recreate_missing_package     = var.recreate_missing_package
   trigger_on_package_timestamp = var.trigger_on_package_timestamp
+  local_existing_package       = var.local_existing_package
 
   runtime                        = "python3.11"
   architectures                  = var.architectures

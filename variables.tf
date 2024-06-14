@@ -168,6 +168,12 @@ variable "trigger_on_package_timestamp" {
   default     = true
 }
 
+variable "local_existing_package" {
+  description = "Path to the existing Lambda package"
+  type        = string
+  default     = null
+}
+
 variable "log_events" {
   description = "Boolean flag to enabled/disable logging of incoming events"
   type        = bool
