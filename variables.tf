@@ -162,6 +162,12 @@ variable "recreate_missing_package" {
   default     = true
 }
 
+variable "trigger_on_package_timestamp" {
+  description = "Whether to recreate the Lambda package if the timestamp changes"
+  type        = bool
+  default     = true
+}
+
 variable "log_events" {
   description = "Boolean flag to enabled/disable logging of incoming events"
   type        = bool
